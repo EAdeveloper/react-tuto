@@ -13,15 +13,30 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Title title="Places"> </Title>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <section>
+        <div>
+          <div>
+            <Title></Title>
+            <button> Create free account</button>
+            <div>
+              <ul>
+                <li>
+                  <h3>Ratings with emotions</h3> 
+                  <p>Rate your places with experiences, not with numbers</p>
+                </li>
+                  <li>
+                  <h3>Not Internet? Not problems :) </h3> 
+                  <p>Places works without Internet</p>
+                </li>
+                 <li>
+                  <h3>Your favorite places </h3> 
+                  <p>Define your list of favorite places </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+         </div> 
+      </section>
     );
   }
 }
