@@ -18,6 +18,7 @@ class App extends Component {
           <div>
             <Title></Title>
             <button> Create free account</button>
+            <img src={process.env.PUBLIC_URL + "/images/travel.png"} height="300" />
             <div>
               <ul>
                 <li>
