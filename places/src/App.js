@@ -20,7 +20,7 @@ class App extends Component {
  places(){
   return data.places.map((place, index)=>{
     return(
-      <div className="col-xs-12 col-sm-4" >
+      <div className="col-xs-12 col-sm-4" key={index}>
         <Card>
           <CardMedia>
             <img src={process.env.PUBLIC_URL + place.imageUrl} style={{"height": '200px', "width": '400px'}}/>
@@ -36,6 +36,7 @@ class App extends Component {
   render(){
       return (
       <MuiThemeProvider>
+      <section>
         <div className="Header-background" >
           <div style={{"width":"80%", "margin":"0 auto"}} >
             <div className="Header-main">
@@ -98,6 +99,7 @@ class App extends Component {
              {this.places()}
            </div>  
         </div>
+      </section>
       </MuiThemeProvider>
     );
   }
