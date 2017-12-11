@@ -19,27 +19,21 @@ class App extends Component {
     numero: 0
   };
  
-  // updates the func for a new one for the value in 'this' that belongs to its component
-  this.updateNumero = this.updateNumero.bind(this);
 }
 
-updateNumero(){
-  this.setState({
-      numero: this.state.numero + 1
-    });
 
-}
 
   render() {
     return (
       <section>
-        <div className="App-background" >
+        <div className="Header-background" >
           <div style={{"width":"80%", "margin":"0 auto"}} >
-            <Title></Title>
-            <h2>{this.state.numero} </h2>
-          {/*the functio is being updating from the construstor*/}
-            <button onClick={this.updateNumero}> Create free account</button>
-            <img src={process.env.PUBLIC_URL + "/images/travel.png"} height="300" />
+            <div className="Header-main">
+                <Title></Title>
+                {/*the functio is being updating from the construstor*/}
+                <button > Create free account</button>
+                <img className='Header-illustration' src={process.env.PUBLIC_URL + "/images/travel.png"}/>
+            </div>
             <div>
               <ul>
                 <li>
