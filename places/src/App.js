@@ -5,8 +5,7 @@ import './App.css';
 // When exported by default does not use brackets
 import Title from './components/title';
 
-// Elements imported with default uses Brackets {}
-import {hola } from "./components/title"
+
 
 class App extends Component {
   hello(){
@@ -15,9 +14,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">{hola()}
+        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Title> </Title>
+          <Title title="Places"> </Title>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
