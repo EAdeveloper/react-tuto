@@ -33,34 +33,57 @@ class App extends Component {
                 <RaisedButton label= "Create free account" primary={true}/>
                 <img className='Header-illustration' src={process.env.PUBLIC_URL + "/images/travel.png"}/>
             </div>
-          </div>
-         </div>
-
-         <div style={{'background-color': indigo400, 'padding': "50px"}}>
-              <ul>
+            <div>
+               <ul>
                 <Card className="Header-benefits">
                   <CardText>
-                    <img src={process.env.PUBLIC_URL + 'images/rate.png' } />
-                    <h3>Ratings with emotions</h3> 
-                    <p>Rate your places with experiences, not with numbers</p>
+                    <div className='row'>
+                      <div className='Header-benefits-img' style={{'background-color':redA400}}>
+                          <img src={process.env.PUBLIC_URL + 'images/rate.png' } />
+                      </div>
+                      <div className='Header-benefits-content'> 
+                        <h3>Ratings with emotions</h3> 
+                        <p>Rate your places with experiences, not numbers</p>
+                      </div>
+                    </div>
                   </CardText> 
                 </Card>
+
                  <Card className="Header-benefits">
                   <CardText>
-                    <img src={process.env.PUBLIC_URL + 'images/notinternet.png' } />
-                    <h3>Not Internet? Not problems :) </h3> 
-                    <p>Places works without Internet</p>
+                    <div className='row'>
+                      <div className='Header-benefits-img' style={{'background-color':lightBlueA400}}>
+                          <img src={process.env.PUBLIC_URL + 'images/notinternet.png' } />
+                      </div>
+                      <div className='Header-benefits-content'> 
+                        <h3>Not Internet? Not problems :) </h3> 
+                        <p>Places works without Internet or trought slow connections</p>
+                      </div>
+                    </div>
                   </CardText> 
                 </Card>
+
                  <Card className="Header-benefits">
                   <CardText>
-                    <img src={process.env.PUBLIC_URL + 'images/favorite.png' } />
-                    <h3>Your favorite places </h3> 
-                    <p>Define your list of favorite places </p>
+                    <div className='row'>
+                      <div className='Header-benefits-img' style={{'background-color':amberA400}}>
+                          <img src={process.env.PUBLIC_URL + 'images/favorite.png' } />
+                      </div>
+                      <div className='Header-benefits-content'> 
+                        <h3>Your favorite places </h3> 
+                        <p>Define your list of favorite places around the world  </p>
+                      </div>
+                    </div>
                   </CardText> 
                 </Card>
               </ul>
             </div>
+          </div>
+         </div>
+
+        <div style={{'background-color': indigo400, 'padding': "50px"}}>
+             
+        </div>
       </MuiThemeProvider>
     );
   }
