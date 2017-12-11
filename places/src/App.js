@@ -18,9 +18,9 @@ class App extends Component {
  }
 
  places(){
-  return data.places.map(place=>{
+  return data.places.map((place, index)=>{
     return(
-      <div className="col-xs-12 col-sm-4">
+      <div className="col-xs-12 col-sm-4" >
         <Card>
           <CardMedia>
             <img src={process.env.PUBLIC_URL + place.imageUrl} style={{"height": '200px', "width": '400px'}}/>
