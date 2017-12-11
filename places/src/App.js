@@ -1,37 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
 
 // When exported by default does not use brackets
 import Title from './components/title';
+import './App.css';
+
 
 
 
 class App extends Component {
 
   // get the components props
-  constructor(props){
+  // constructor(props){
   //send the same props to parent's construtor, in this case is "Component" from where App extends  
-  super(props);
-
-  //state is a special object to save data and can udate it while the component is executing 
-  this.state ={
-    numero: 0
-  };
- 
-}
+  // super(props);
+  // }
 
 
 
-  render() {
-    return (
-      <section>
+  render(){
+      return (
+      <MuiThemeProvider>
         <div className="Header-background" >
           <div style={{"width":"80%", "margin":"0 auto"}} >
             <div className="Header-main">
                 <Title></Title>
                 {/*the functio is being updating from the construstor*/}
-                <button > Create free account</button>
+                <RaisedButton label= "Create free account" primary={true}/>
                 <img className='Header-illustration' src={process.env.PUBLIC_URL + "/images/travel.png"}/>
             </div>
             <div>
@@ -52,7 +48,7 @@ class App extends Component {
             </div>
           </div>
          </div> 
-      </section>
+      </MuiThemeProvider>
     );
   }
 }
