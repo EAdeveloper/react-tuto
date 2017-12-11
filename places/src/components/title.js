@@ -11,3 +11,9 @@ export default class Title extends React.Component{
 	}
 
 } 
+
+// ex of element exported without default
+// When imported into App.js, Should use brackets
+export function hola(){
+	return "Hola";
+}

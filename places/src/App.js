@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+// When exported by default does not use brackets
 import Title from './components/title';
+
+// Elements imported with default uses Brackets {}
+import {hola } from "./components/title"
 
 class App extends Component {
   hello(){
@@ -10,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header">{hola()}
           <img src={logo} className="App-logo" alt="logo" />
           <Title> </Title>
         </header>
