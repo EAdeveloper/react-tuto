@@ -12,16 +12,32 @@ import  PlaceCard from '../components/places/placeCard'
 
 
 
-
-
 export default class Home extends React.Component{
 
+	constructor(props){
+		super(props);
+
+		this.state = {
+			places: data.places
+		}
+	   	{/*Reassing the fucn to avoid loss its vlaues when it gets into placeCard component*/}
+		this.hidePLace = this.hidePLace.bind(this);
+	}
+
 	places(){
-	  return data.places.map((place, index)=>{
+	  return this.state.places.map((place, index)=>{
+	    	{/*remover, place and indes are custom props to pass the func or data to the placeCard component module*/}
 	    return(
-	     <PlaceCard place={place} index={index}> </PlaceCard>
+	     <PlaceCard remover={this.hidePLace} place={place} index={index}> </PlaceCard>
 	    );
 	  })
+	 }
+
+	 hidePLace(place){
+	 	this.setState({
+	 		// filter() make a iteration for elements 
+	 		places: this.state.places.filter(el => el != place)
+	 	})
 	 }
 
 	render(){
