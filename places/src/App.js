@@ -18,17 +18,15 @@ class App extends Component {
   this.state ={
     numero: 0
   };
-  // use => to preserve the value in 'this'
-  setInterval(()=>{
-    // setState fucntion is to update value for the state
-    // state should be always updated throught the method 'setState'
-    this.setState({
-      numero: this.state.numero + 1
-    })
-  },1000)
-  
+ 
 }
 
+updateNumero(){
+  this.setState({
+      numero: this.state.numero + 1
+    });
+
+}
 
   render() {
     return (
@@ -37,7 +35,8 @@ class App extends Component {
           <div>
             <Title></Title>
             <h2>{this.state.numero} </h2>
-            <button> Create free account</button>
+          {/*use an anonymus func ()=> to preserve the value on 'this'*/}
+            <button onClick={()=>{this.updateNumero()} }> Create free account</button>
             <img src={process.env.PUBLIC_URL + "/images/travel.png"} height="300" />
             <div>
               <ul>
