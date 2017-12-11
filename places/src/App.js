@@ -19,7 +19,7 @@ class App extends Component {
     numero: 0
   };
  
-  // updates the func for a new one in the value in 'this' that belongs to its component
+  // updates the func for a new one for the value in 'this' that belongs to its component
   this.updateNumero = this.updateNumero.bind(this);
 }
 
@@ -33,8 +33,8 @@ updateNumero(){
   render() {
     return (
       <section>
-        <div>
-          <div>
+        <div className="App-background" >
+          <div style={{"width":"80%", "margin":"0 auto"}} >
             <Title></Title>
             <h2>{this.state.numero} </h2>
           {/*the functio is being updating from the construstor*/}
