@@ -19,6 +19,8 @@ class App extends Component {
     numero: 0
   };
  
+  // updates the func for a new one in the value in 'this' that belongs to its component
+  this.updateNumero = this.updateNumero.bind(this);
 }
 
 updateNumero(){
@@ -35,8 +37,8 @@ updateNumero(){
           <div>
             <Title></Title>
             <h2>{this.state.numero} </h2>
-          {/*use an anonymus func ()=> to preserve the value on 'this'*/}
-            <button onClick={()=>{this.updateNumero()} }> Create free account</button>
+          {/*the functio is being updating from the construstor*/}
+            <button onClick={this.updateNumero}> Create free account</button>
             <img src={process.env.PUBLIC_URL + "/images/travel.png"} height="300" />
             <div>
               <ul>
