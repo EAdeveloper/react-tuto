@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {Card, CardText} from 'material-ui/Card';
-
+import {Card, CardText, CardMedia, CardTitle} from 'material-ui/Card';
+import './App.css';
 import {indigo400, redA400, lightBlueA400, amberA400} from 'material-ui/styles/colors';
 
 // When exported by default does not use brackets
 import Title from './components/title';
-import './App.css';
-
-
+import data from './request/places';
 
 
 class App extends Component {
 
-  // get the components props
-  // constructor(props){
-  //send the same props to parent's construtor, in this case is "Component" from where App extends  
-  // super(props);
-  // }
+ constructor(props){
+    super(props);
+  console.log(data);
+ }
 
-
+ places(){
+  return data.places.map(place=>{
+    return(
+      <div className="col-xs-12 col-sm-4">
+        <Card>
+          <CardMedia>
+            <img src={process.env.PUBLIC_URL + place.imageUrl} style={{"height": '200px', "width": '400px'}}/>
+          </CardMedia>
+          <CardTitle title={place.title}> </CardTitle>
+          <CardText>{place.description}</CardText>
+        </Card>
+      </div>
+    );
+  })
+ }
 
   render(){
       return (
@@ -81,8 +92,11 @@ class App extends Component {
           </div>
          </div>
 
-        <div style={{'background-color': indigo400, 'padding': "50px"}}>
-             
+        <div style={{'background-color': indigo400, 'padding': "50px", 'color': 'white'}}>
+          <div><h3 style={{'fontSize': '24px'}}> Popular places </h3> </div>
+          <div className="row">
+             {this.places()}
+           </div>  
         </div>
       </MuiThemeProvider>
     );
