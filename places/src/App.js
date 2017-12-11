@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import {indigo400} from 'material-ui/styles/colors';
+
 // When exported by default does not use brackets
 import Title from './components/title';
 import './App.css';
@@ -30,7 +32,10 @@ class App extends Component {
                 <RaisedButton label= "Create free account" primary={true}/>
                 <img className='Header-illustration' src={process.env.PUBLIC_URL + "/images/travel.png"}/>
             </div>
-            <div>
+          </div>
+         </div>
+
+         <div style={{'background-color': indigo400, 'padding': "50px"}}>
               <ul>
                 <li>
                   <h3>Ratings with emotions</h3> 
@@ -46,8 +51,6 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          </div>
-         </div> 
       </MuiThemeProvider>
     );
   }
