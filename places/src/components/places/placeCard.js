@@ -2,14 +2,31 @@ import React from 'react';
 import {Card, CardText, CardMedia, CardTitle, CardActions} from 'material-ui/Card';
 import {indigo400, redA400, lightBlueA400, amberA400} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
+import CSSTransition from 'react-transition-group/CSSTransition';
 
 
 
 
 export default class PlaceCard extends React.Component{
+	constructor(props){
+		super(props);
+
+		this.state = {
+			show: true
+		}
+
+			// setInterval(()=>this.setState({show: !this.state}), 5000)
+	}
+
 
 	render(){
 		return(
+			<CSSTransition 
+				
+				classNames= "fade-scale"
+				// in={this.state.show}
+				in={this.props.in}
+			>
 			<div className="col-xs-12 col-sm-4" key={this.props.index}>
 		        <Card>
 		          <CardMedia>
@@ -26,6 +43,7 @@ export default class PlaceCard extends React.Component{
 		          </CardActions>
 		        </Card>
 	      </div>
+	      </CSSTransition>
 		);
 	}
 

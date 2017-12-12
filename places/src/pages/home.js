@@ -9,7 +9,7 @@ import Title from '../components/title';
 import data from '../request/places';
 import Benefits from '../components/benefits';
 import  PlaceCard from '../components/places/placeCard'
-
+import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 
 export default class Home extends React.Component{
@@ -18,15 +18,18 @@ export default class Home extends React.Component{
 		super(props);
 
 		this.state = {
-			places: data.places
+			places: []
 		}
-	   	{/*Reassing the fucn to avoid loss its vlaues when it gets into placeCard component*/}
+
+		setTimeout(()=>this.setState({places: data.places}), 3000)
+
+	   	// Reassing the fucn to avoid loss its vlaues when it gets into placeCard component
 		this.hidePLace = this.hidePLace.bind(this);
 	}
 
 	places(){
 	  return this.state.places.map((place, index)=>{
-	    	{/*remover, place and indes are custom props to pass the func or data to the placeCard component module*/}
+	    // remover, place and indes are custom props to pass the func or data to the placeCard component module
 	    return(
 	     <PlaceCard remover={this.hidePLace} place={place} index={index}> </PlaceCard>
 	    );
@@ -59,9 +62,9 @@ export default class Home extends React.Component{
 
 		        <div style={{'backgroundColor': indigo400, 'padding': "50px", 'color': 'white'}}>
 		          <div><h3 style={{'fontSize': '24px'}}> Popular places </h3> </div>
-		          <div className="row">
+		          <TransitionGroup className="row">
 		             {this.places()}
-		           </div>  
+		           </TransitionGroup>  
 		        </div>
 	   	 </section>    
 		);
