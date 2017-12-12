@@ -39,7 +39,7 @@ export default class Home extends React.Component{
 	 hidePLace(place){
 	 	this.setState({
 	 		// filter() make a iteration for elements 
-	 		places: this.state.places.filter(el => el != place)
+	 		places: this.state.places.filter(el => el !== place)
 	 	})
 	 }
 
@@ -52,7 +52,7 @@ export default class Home extends React.Component{
 	                <Title></Title>
 	                {/*the functio is being updating from the construstor*/}
 	                <RaisedButton label= "Create free account" primary={true}/>
-	                <img className='Header-illustration' src={process.env.PUBLIC_URL + "/images/travel.png"}/>
+	                <img alt="not found" className='Header-illustration' src={process.env.PUBLIC_URL + "/images/travel.png"}/>
 	            </div>
 	            <div>
 	               <Benefits> </Benefits>

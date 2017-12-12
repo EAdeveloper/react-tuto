@@ -10,10 +10,10 @@ import Home from './pages/home';
 
 class App extends Component {
 
- constructor(props){
-    super(props);
-  // console.log(data);
- }
+ // constructor(props){
+ //    super(props);
+ //  // console.log(data);
+ // }
 
 
 

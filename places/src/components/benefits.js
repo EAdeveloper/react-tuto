@@ -1,6 +1,6 @@
 import React from 'react';
-import {Card, CardText, CardMedia, CardTitle} from 'material-ui/Card';
-import {indigo400, redA400, lightBlueA400, amberA400} from 'material-ui/styles/colors';
+import {Card, CardText} from 'material-ui/Card';
+import { redA400, lightBlueA400, amberA400} from 'material-ui/styles/colors';
 
 
 
@@ -15,7 +15,7 @@ export default class Benefit extends React.Component{
                   <CardText>
                     <div className='row'>
                       <div className='Header-benefits-img' style={{'backgroundColor':redA400}}>
-                          <img src={process.env.PUBLIC_URL + 'images/rate.png' } />
+                          <img alt="not found"  src={process.env.PUBLIC_URL + 'images/rate.png' } />
                       </div>
                       <div className='Header-benefits-content'> 
                         <h3>Ratings with emotions</h3> 
@@ -29,7 +29,7 @@ export default class Benefit extends React.Component{
                   <CardText>
                     <div className='row'>
                       <div className='Header-benefits-img' style={{'backgroundColor':lightBlueA400}}>
-                          <img src={process.env.PUBLIC_URL + 'images/notinternet.png' } />
+                          <img alt="not found"  src={process.env.PUBLIC_URL + 'images/notinternet.png' } />
                       </div>
                       <div className='Header-benefits-content'> 
                         <h3>Not Internet? Not problems :) </h3> 
@@ -43,7 +43,7 @@ export default class Benefit extends React.Component{
                   <CardText>
                     <div className='row'>
                       <div className='Header-benefits-img' style={{'backgroundColor':amberA400}}>
-                          <img src={process.env.PUBLIC_URL + 'images/favorite.png' } />
+                          <img alt="not found"  src={process.env.PUBLIC_URL + 'images/favorite.png' } />
                       </div>
                       <div className='Header-benefits-content'> 
                         <h3>Your favorite places </h3> 
